@@ -1,0 +1,251 @@
+@font-face {
+    font-family: 'Pangram-semi';
+    src: url(../fonts/PPPangramSans-Semibold.otf);
+  }
+
+@font-face {
+    font-family: 'Pangram-light';
+    src: url(../fonts/PPPangramSans-Medium.otf);
+}
+
+
+@font-face {
+    font-family: 'TTa';
+    src: url(../fonts/TTAutonomous-DemiBold.otf);
+  }
+  
+  *{
+      margin: 0 auto;
+      padding: 0;
+      width: 100%;
+  }
+  *::before,
+  *::after {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  
+  /*Убираем линии обводки некоторых браузеров*/
+  :focus,
+  :active {
+    outline: none;
+  }
+  
+  a:focus,
+  a:active {
+    outline: none;
+  }
+  
+  
+  input::-ms-clear {
+    display: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+  
+  a,
+  a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  
+  a:hover {
+    text-decoration: none;
+  }
+  
+  // div{
+  //   display: inherit;
+  // }
+  
+  // code starts here!
+
+$font-main: #222222;
+$font-subtitle: #6E6E6E;
+$background: #222222;
+$font-sec: #B8B8B8;
+
+h2{
+    font-family: "TTa";
+    font-weight: 600;
+    font-size: 5vw;
+}
+
+h3{
+    font-family: 'Pangram-semi';
+    font-size: 3vw;
+}
+
+div{
+    font-family: 'Pangram-light';
+    font-size: 1vw;
+    font-weight: 100;
+}
+.line{
+    border-bottom: 1px solid $font-subtitle;
+}
+
+.wrapper{
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .60), rgba(0, 0, 0, 0)), url(../img/фото.png) no-repeat;
+    background-size: 100%;
+}
+.header{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 90% 10%;
+    &__logos{
+        display: flex;
+        .trade-logo{
+            width: 7vw;
+        }
+        .xcmg-logo{
+            width: 7vw;
+        }
+    }
+    &__links{
+        display: flex;
+        color: white;
+        width:15vw;
+        margin: auto;
+        .catalogue{
+            width: 10vw;
+        }
+        .contacts{
+            width: 10vw;
+        }
+    }
+    &__feedback{
+        display: flex;
+        color: white;
+        .phone{
+            margin: auto;
+            width: 10vw;
+        }
+        img{
+            margin: auto;
+            width: 2vw;
+            height: 2vw;
+        }
+    }
+}
+
+
+
+// Главный экран с логотипом
+
+.main-window{
+    margin-top: 2vw;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 3fr 4fr 8fr 2fr;
+
+    grid-template-areas: 
+        "logo logo logo"
+        ". subt ."
+        "sticker . ."
+        "adv1 adv2 adv3";
+
+    color: white;
+
+    &__title{
+        grid-area: logo;
+    }
+    &__subtitle{
+        grid-area: subt;
+        margin-top: 2vw;
+        font-size: 1.5vw;
+        line-height: 2vw;
+        width: 50%;
+    }
+    &__sticker{
+        height: 4vw;
+        width: 4vw;
+        grid-area: sticker;
+        line-height: 4vw;
+        border: 1px solid rgba(0, 0, 0, 0);
+        border-radius: 100%;
+        background: rgba(0, 0, 0, .40);
+        padding: 2vw;
+        text-align: center;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+}
+    &__adv-1{
+        grid-area: adv1;
+        font-size: 1.5vw;
+    }
+    &__adv-2{
+        grid-area: adv2;
+        width: 40%;
+        font-size: 1vw;
+        p{
+            font-size: 1.2vw;
+        }
+    }
+    &__adv-3{
+        grid-area: adv3;
+        font-size: 1vw;
+        p{
+            font-size: 1.2vw;
+        }
+    }
+}
+
+.window-1{
+    margin-top: 4vw;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr 2fr;
+    grid-template-rows: 0.5fr 0.5fr 4fr 4fr 4fr;
+    grid-template-areas: 
+        "title title title title"
+        "filterr filterr filterr filterr"
+        "coleso-1 coleso-1 gusenich-1 gusenich-2"
+        "gusenich-3 coleso-2 coleso-2 gusenich-4"
+        "gusenich-5 gusenich-6 coleso-3 coleso-3";
+
+    &__title{
+        grid-area: title;
+    }
+    &__filter{
+        grid-area: filterr;
+    }
+    &__coleso-1{
+        grid-area: coleso-1;
+    }
+    &__gusenich-1{
+        grid-area: gusenich-1;
+    }
+    &__gusenich-2{
+        grid-area: gusenich-2;
+    }
+    &__gusenich-3{
+        grid-area: gusenich-3;
+    }
+    &__coleso-2{
+        grid-area: coleso-2;
+    }
+    &__gusenich-4{
+        grid-area: gusenich-4;
+    }
+    &__gusenich-5{
+        grid-area: gusenich-5;
+    }
+    &__gusenich-6{
+        grid-area: gusenich-6;
+    }
+    &__coleso-3{
+        grid-area: coleso-3;
+    }
+
+}
