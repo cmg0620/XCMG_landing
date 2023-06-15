@@ -456,9 +456,8 @@ button.filter-btn:hover, button.filter-btn:active, button.filter-btn:visited {
 .modal img {
   height: 20vw;
   width: auto;
-  left: 50%;
   grid-area: pic;
-  margin-top: 1vw;
+  margin-top: 5vw;
 }
 
 .descr-wrap {
