@@ -7,6 +7,15 @@ document.querySelector('.menu').addEventListener('click', function(){
 document.querySelector('.burger-close').addEventListener('click', function(){
     burger.classList.toggle('show-burger');
 })
+document.querySelector('.bcat').addEventListener('click', function(){
+    burger.classList.remove('show-burger');
+})
+document.querySelector('.badv').addEventListener('click', function(){
+    burger.classList.remove('show-burger');
+})
+document.querySelector('.bord').addEventListener('click', function(){
+    burger.classList.remove('show-burger');
+})
 //1 окно, фильтрация/табы
 let tab = document.querySelectorAll('.filter-content')
 let btnf = document.querySelectorAll('.filter-btn')

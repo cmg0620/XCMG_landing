@@ -27,9 +27,9 @@
             <div class="header__burger">
                 <img class="burger-close" src="img/icons8-удалить.svg">
                 <ul class="burger-text">
-                    <li><a>Каталог</a></li>
-                    <li><a>Контакты</a></li>
-                    <li><a>Позвонить нам</a></li>
+                    <li class="bcat"><a href="#catalogue">Каталог</a></li>
+                    <li class="badv"><a href="#adv">Преимущества</a></li>
+                    <li class="bord"><a a href="#order">Заказать</a></li>
                 </ul>
             </div>
         </header>
@@ -48,10 +48,11 @@
         </section>
     </div>
     <section class="window-1">
+        <a name="catalogue"></a>
         <h2 class="window-1__title">КАРЬЕРНАЯ ТЕХНИКА</h2>
         <div class="window-1__filter filter">
             <button class="filter__all filter-btn filter-btn-active" onclick="filterWindow('all')">Все</button>
-            <button class="filter__coleso filter-btn filter-btn-inactive" onclick="filterWindow('coleso')">Колесные экскаваторы</button>
+            <button class="filter__coleso filter-btn filter-btn-inactive" onclick="filterWindow('coleso')">Колёсные экскаваторы</button>
             <button class="filter__gusenich filter-btn filter-btn-inactive" onclick="filterWindow('gusenich')">Гусеничные экскаваторы</button>
         </div>
 
@@ -244,6 +245,7 @@
     </section>
 
     <section class="window-3">
+        <a name="adv"></a>
         <h3 class="window-3__pretitle">Поставляем спецтехнику
             <span>с 2013 года</span>
         </h3>
@@ -318,6 +320,40 @@
             </div>
         </div>
     </section>
+        <section class="form">
+            <a name="order"></a>
+        <img class="form__logo" src="img/Vector.svg">
+        <div class="form__line line"></div>
+        <div class="form__wrapper">
+            <div class="form-text">Готовы сделать заказ — заполните форму обратной связи</div>
+            <form action="#">
+                <input type="text" placeholder="Имя">
+                <input type="tel" placeholder="Телефон">
+                <input type="text" placeholder="ИНН организации">
+                <input type="text" placeholder="Почта">
+                <input type="submit" placeholder="Отправить">
+                <div class="capt">Нажимая на кнопку, вы соглашаетесь с политикой конфиденциальности данных</div>
+            </form>
+        </div>
+        <div class="form__line2 line"></div>
+    </section>
+    <footer class="footer">
+        
+        <img class="footer__logo" src="img/Слой 1.svg" alt="">
+        <div class="footer-wrap">
+            <div class="footer__catalogue">
+                Каталог
+                <a>Колесные экскаваторы</a>
+                <a>гусеничные экскаваторы</a>
+            </div>
+            <div class="footer__contacts">
+                Контакты
+                <a>8 (800) 500-21-88</a>
+                <a>г. Москва, ул. Василия Петушкова д. 17, этаж 1, пом. 9</a>
+            </div>
+        </div>
+
+    </footer>
     <script src="js/script.js">
 
     </script>
