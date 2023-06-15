@@ -1,10 +1,19 @@
+//главное окно, бургер меню адаптива
+let burger = document.querySelector('.header__burger')
+console.log(burger)
+document.querySelector('.menu').addEventListener('click', function(){
+    burger.classList.toggle('show-burger');
+})
+document.querySelector('.burger-close').addEventListener('click', function(){
+    burger.classList.toggle('show-burger');
+})
 //1 окно, фильтрация/табы
 let tab = document.querySelectorAll('.filter-content')
 let btnf = document.querySelectorAll('.filter-btn')
 let windowf = document.querySelector('.window-1-wrap')
 
-console.log(windowf)
-console.log(tab)
+// console.log(windowf)
+// console.log(tab)
 
 
 function filterWindow(n){
@@ -51,7 +60,6 @@ function filterWindow(n){
 
 
 
-
 //2 окно, модальное окно
 const modalButton = document.querySelectorAll('.modal-btn'); //все кнопки
 const modals = document.querySelector('.window-2__descr-1'); //оверлей
@@ -89,11 +97,13 @@ function hideWindow(n){
 // 3 окно, аккордеон
 var acc = document.getElementsByClassName("accordeon-btn");
 var j;
+let accMain = document.querySelectorAll(".accordeon");
+console.log(accMain);
 
 for (j=0; j<acc.length; j++) {
     acc[j].onclick = function () {
         this.classList.toggle("active");
-
+        this.parentElement.parentElement.classList.toggle("panel-adaptive");
         this.nextElementSibling.classList.toggle("show");      
     }
 }

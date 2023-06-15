@@ -61,6 +61,10 @@ li {
   list-style-type: none;
 }
 
+a {
+  color: #222222;
+}
+
 h2 {
   font-family: "TTa";
   font-weight: 600;
@@ -134,6 +138,9 @@ div {
   margin: auto;
   width: 2vw;
   height: 2vw;
+}
+.header__burger {
+  display: none;
 }
 
 .main-window {
@@ -597,10 +604,6 @@ button.accordeon-btn:active, button.accordeon-btn:hover {
   background-color: #222222;
   border: 1px solid white;
   color: white;
-  -webkit-border-radius: 0.5vw;
-  -moz-border-radius: 0.5vw;
-  -ms-border-radius: 0.5vw;
-  -o-border-radius: 0.5vw;
 }
 
 .panel {
@@ -652,10 +655,6 @@ button.accordeon-btn:active, button.accordeon-btn:hover {
   position: absolute;
   margin-top: 30%;
   z-index: 2;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
 }
 .buttons a {
   width: 6vw;
@@ -669,4 +668,193 @@ button.accordeon-btn:active, button.accordeon-btn:hover {
 .buttons img {
   height: 6vw;
   width: 6vw;
+}
+
+@media (max-width: 425px) {
+  h3 {
+    font-size: 3vw;
+  }
+  .wrapper {
+    height: 100vh;
+    background-size: auto 100%;
+    background-position: center;
+    width: 100%;
+  }
+  .header {
+    height: 15vw;
+  }
+  .header__logos .trade-logo {
+    width: 18vw;
+    margin-right: 5vw;
+  }
+  .header__logos .xcmg-logo {
+    width: 18vw;
+  }
+  .header__links {
+    display: none;
+  }
+  .header__feedback {
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+  .header__feedback .phone, .header__feedback .search, .header__feedback .like {
+    display: none;
+  }
+  .header__feedback .menu {
+    width: 5vw;
+    height: 5vw;
+  }
+  .header__burger {
+    display: none;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.8);
+    font-family: "Pangram-light";
+    font-size: 8vw;
+  }
+  .header__burger .burger-text {
+    color: white;
+    margin-top: 10vw;
+    text-align: center;
+    width: 50vw;
+  }
+  .header__burger a {
+    color: white;
+  }
+  .show-burger {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .burger-close {
+    margin-top: 4vw;
+    width: 6vw;
+    height: 6vw;
+  }
+  .main-window {
+    height: 90vh;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 3fr 4fr 5fr 1fr 1fr 1fr;
+    grid-template-areas: "logo logo logo" ". subt ." "sticker . ." "adv1 adv1 adv1" "adv2 adv2 adv2" "adv3 adv3 adv3";
+  }
+  .main-window__title {
+    margin: auto;
+  }
+  .main-window__adv-1 {
+    font-size: 3vw;
+  }
+  .main-window__adv-2 {
+    width: 100%;
+    font-size: 2.5vw;
+  }
+  .main-window__adv-2 p {
+    font-size: 3vw;
+  }
+  .main-window__adv-3 {
+    font-size: 2.5vw;
+  }
+  .main-window__adv-3 p {
+    font-size: 3vw;
+  }
+  .main-window__subtitle {
+    font-size: 3vh;
+    line-height: 6vw;
+    width: 100%;
+  }
+  .main-window__sticker {
+    display: none;
+  }
+  .window-1 {
+    grid-template-rows: 0.1fr 0.1fr 12fr;
+  }
+  .window-1__filter {
+    width: 80vw;
+  }
+  .window-1-wrap {
+    grid-area: filter-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  button.filter-btn {
+    font-family: "Pangram-light";
+    font-size: 10px;
+  }
+  .filter__all {
+    height: 20px;
+    width: 70px;
+    margin: 0;
+  }
+  .filter__coleso {
+    height: 20px;
+    width: 140px;
+  }
+  .filter__gusenich {
+    height: 20px;
+    width: 140px;
+    margin-left: 0;
+    margin-top: 2vw;
+  }
+  .w1-photo {
+    height: 90vw;
+    margin-bottom: 5vw;
+  }
+  .w1-photo img {
+    height: 75vw;
+  }
+  .w1-photo ul {
+    font-size: 2.5vw;
+    line-height: 3vw;
+  }
+  .window-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .window-2__title {
+    margin-bottom: 6vw;
+  }
+  button.accordeon-btn h3 {
+    font-size: 2vw;
+  }
+  .window-3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .accordeon {
+    height: 20vw;
+  }
+  .panel.show {
+    font-size: 2vw;
+    width: 40vw;
+  }
+  .panel-adaptive {
+    height: 20vw;
+    margin-bottom: 15vw;
+  }
+  .w1-photo__show button {
+    height: 75vw;
+  }
+  .w1-photo__show p {
+    font-size: 10px;
+  }
 }
