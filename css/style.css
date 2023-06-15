@@ -807,7 +807,7 @@ footer a {
   }
   .header__burger {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
@@ -957,5 +957,63 @@ footer a {
   }
   .w1-photo__show p {
     font-size: 10px;
+  }
+  .modal {
+    width: 80vw;
+    height: auto;
+    background-color: white;
+    border: 3px #222222 solid;
+    border-radius: 0.5vw;
+    -webkit-border-radius: 0.5vw;
+    -moz-border-radius: 0.5vw;
+    -ms-border-radius: 0.5vw;
+    -o-border-radius: 0.5vw;
+    font-size: 2vw;
+  }
+  .modal img {
+    height: 30vw;
+    width: auto;
+    grid-area: pic;
+    margin-top: 5vw;
+  }
+  button.close-modal-btn {
+    background-color: white;
+    color: #222222;
+    font-family: "Pangram-light";
+    font-size: 1.5vw;
+    width: 8vw;
+    height: 8vw;
+    border: 1px solid #222222;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+  }
+  button.buy-modal {
+    background-color: #222222;
+    font-family: "Pangram-light";
+    font-size: 2vw;
+    width: 12vw;
+    height: 12vw;
+    border: 1px solid #222222;
+    border-radius: 100%;
+    margin-left: 0;
+    margin-left: 4vw;
+    margin-top: 3vw;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+  }
+  .inner {
+    width: 70vw;
+  }
+  .descr-wrap {
+    width: 80vw;
+  }
+  .subtitles p {
+    font-size: 2vw;
+    width: 50vw;
   }
 }
